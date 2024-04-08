@@ -6,8 +6,10 @@ console.log(`Number of categories: ${categoriesTotal.length}`);
 const categoryName = document.querySelectorAll("h2");
 
 function getCategName(categoryName) {
+  const categName = '';
 
-  categoryName.forEach(function (item) {
-    console.log(`Category: ${item}`);
+  categoryName.forEach((item) => {
+    categName = `Category: ${item}`;
   });
 }
+console.log(categName);

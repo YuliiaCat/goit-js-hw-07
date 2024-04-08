@@ -11,5 +11,5 @@ function getCategName(categoryName) {
   categoryName.forEach((item) => {
     categName = `Category: ${item}`;
   });
+  console.log(categName);
 }
-console.log(categName);

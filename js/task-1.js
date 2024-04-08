@@ -3,13 +3,13 @@
 const categoriesTotal = document.querySelectorAll(".item");
 console.log(`Number of categories: ${categoriesTotal.length}`);
 
-const categoryName = document.querySelectorAll("h2");
+const categoryTitles = document.querySelectorAll("h2");
 
-function getCategName(categoryName) {
-  const categName = '';
-
-  categoryName.forEach((item) => {
-    categName = `Category: ${item}`;
+function getCategName(categoryTitles) {
+  categoryTitles.forEach((item) => {
+    const categoryTitle = `Category: ${item.textContent}`;
+    console.log(categoryTitle);
   });
-  console.log(categName);
 }
+
+getCategName(categoryTitles);

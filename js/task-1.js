@@ -15,7 +15,7 @@ function getCategName(categoryTitles) {
 
 function getNumOfElements(categoryElements) {
   categoryElements.forEach((elem) => {
-    const numOfElements = ulElement.querySelectorAll("li").length;
+    const numOfElements = elem.querySelectorAll("li").length;
     console.log(`Elements: ${numOfElements}`);
   });
 }

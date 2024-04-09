@@ -4,7 +4,7 @@ const categoriesTotal = document.querySelectorAll(".item");
 console.log(`Number of categories: ${categoriesTotal.length}`);
 
 const categoryTitles = document.querySelectorAll("h2");
-const categoryElements = document.querySelectorAll("li");
+const categoryElements = document.querySelectorAll("ul");
 
 function getCategName(categoryTitles) {
   categoryTitles.forEach((item) => {
@@ -13,12 +13,12 @@ function getCategName(categoryTitles) {
   });
 }
 
-function getNumsOfElements(categoryElements) {
+function getNumOfElements(categoryElements) {
   categoryElements.forEach((elem) => {
-    const numsOfElements = `Elements: ${elem.length}`;
-    console.log(numsOfElements);
+    const numOfElements = elem.length;
+    console.log(`Elements: ${numOfElements}`);
   });
 }
 
 getCategName(categoryTitles);
-getNumsOfElements(categoryElements);
+getNumOfElements(categoryElements);

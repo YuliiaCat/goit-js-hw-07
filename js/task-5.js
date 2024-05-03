@@ -3,16 +3,16 @@
 const button = document.querySelector(".change-color");
 button.addEventListener("click", () => {
   const body = document.body;
-  const elementsWithColorClass = document.querySelectorAll('.color');
+  const textColors = document.querySelector('.color');
 
   const randomHexColor = getRandomHexColor();
 
   body.style.backgroundColor = randomHexColor;
-  elementsWithColorClass.forEach(element => {
-    element.style.color = randomHexColor;
-  });
-});
 
+  const colorName = `<span class="color">${randomHexColor}</span>`;
+  textColors.innerHTML = '';
+  textColors.insertAdjacentHTML('beforeend', colorName);
+});
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)

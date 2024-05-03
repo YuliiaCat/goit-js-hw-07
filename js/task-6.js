@@ -10,9 +10,11 @@ destroyButton.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
   boxes.innerHTML = '';
-  const amount = textInput.value;
+  const amount = parseInt(textInput.value);
 
   if (amount > 0 && amount <= 100) {
+    const fragment = document.createDocumentFragment();
+
     let width = 30;
     let height = 30;
 
@@ -22,10 +24,12 @@ function createBoxes() {
       block.style.width = width + 'px';
       block.style.height = height + 'px';
       block.style.backgroundColor = randomHexColor;
-      boxes.appendChild(block);
+      fragment.appendChild(block);
       width += 10;
       height += 10;
     }
+
+    boxes.appendChild(fragment);
   }
 
   textInput.value = '';
